@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BitcoinConverter</string>
+    <string name="enter_amount">Please enter amount</string>
+    <string name="round_up_value">Round up value?</string>
+    <string name="convert">Convert</string>
+    <string name="btc_value">Bitcoin Value: %s BTC</string>
+    <string name="how_much_naira_will_you_like_to_convert">How much Naira will you like to convert?</string>
+</resources>
