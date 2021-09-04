@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         var btcRate = (amount / 492.20) / 49349.52
 
+        //var btcRate = String.format("%.2f", btcRate).toDouble() //formats result to 2dp default
+
         val roundUp = binding.roundupSwitch.isChecked
         if (roundUp) {
             btcRate = btcRate.let { kotlin.math.round(it) }
