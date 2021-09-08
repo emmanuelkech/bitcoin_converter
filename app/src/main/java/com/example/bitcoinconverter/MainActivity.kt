@@ -1,7 +1,11 @@
 package com.example.bitcoinconverter
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import com.example.bitcoinconverter.databinding.ActivityMainBinding
 import java.text.NumberFormat
 
@@ -16,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding.convertButton.setOnClickListener {
             convertAmount()
         }
+
+        binding.enterAmountLayout.setOnKeyListener { view, keyCode, _ -> keyEvent(view, keyCode) }
     }
 
     private fun convertAmount() {
@@ -42,6 +48,16 @@ class MainActivity : AppCompatActivity() {
     private fun displayResult(btcRate: Double) {
         val formattedResult = NumberFormat.getNumberInstance().format(btcRate)
         binding.btcValue.text = getString(R.string.btc_value, formattedResult)
+    }
+
+    private fun keyEvent(view: View, keyCode : Int) : Boolean {
+        if (keyCode == KeyEvent.KEYCODE_ENTER){
+            //hide the keyboard
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+            return true
+        }
+        return false
     }
 
 }
