@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Emmanuel Ikechukwu/AndroidStudioProjects/BitcoinConverter/app/src/main/res/drawable/ic_btc_value.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/Emmanuel Ikechukwu/AndroidStudioProjects/BitcoinConverter/app/src/main/res/drawable/ic_input.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/Emmanuel Ikechukwu/AndroidStudioProjects/BitcoinConverter/app/src/main/res/drawable/ic_roundup.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/Emmanuel Ikechukwu/AndroidStudioProjects/BitcoinConverter/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
