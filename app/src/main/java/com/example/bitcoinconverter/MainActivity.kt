@@ -25,17 +25,17 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        var btcRate = (amount / 492.20) / 49349.52
+        val btcRate = (amount / 492.20) / 49349.52
 
-        //var btcRate = String.format("%.2f", btcRate).toDouble() //formats result to 2dp default
+        var btcRates = String.format("%.2f", btcRate).toDouble() //formats result to 2dp default
 
         val roundUp = binding.roundupSwitch.isChecked
         if (roundUp) {
-            btcRate = btcRate.let { kotlin.math.round(it) }
+            btcRates = btcRates.let { kotlin.math.round(it) }
 
         }
 
-        displayResult(btcRate)
+        displayResult(btcRates)
 
     }
 
